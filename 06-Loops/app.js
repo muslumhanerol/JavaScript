@@ -42,12 +42,39 @@
 //------------------------------------------------------------------
 
 //FOR
+//1 le 10 arası sayıları yaz
 
-for (let index = 0; index < array.length; index++) {
-    const element = array[index];
-    
+// for (let i = 0; i<=10; i++){ //let i = 0;=döngü degeri.
+//     console.log(i);          //i<=10; = döngünün koşulu.
+// }                            //i++ = 1 artırır.   
+
+//-----
+//1 le prompt tan alınan sayı aralığını yazar.
+// let count = Number(prompt("Lütfen bir sayı giriniz"))
+// for (let i = 1; i <= count; i++) {
+//     console.log(i);    
+// }
+
+//-----
+
+//1 le 10 arası çift sayıları yaz.
+// for (let i = 1; i <= 10; i++) {
+//     if(i%2==0)
+//     console.log(i);    
+// }
+
+//-----
+// 1 le 10 arası tek sayıları yazdır.
+//  for (let i = 1; i <= 10; i++) {
+//      if(i%2==1) //kalan 1 se tek sayıdır.
+//      console.log(i);    
+//  }
+
+ //farklı bir yol
+
+ for (let i = 0; i <= 10; i += 2) {
+    console.log(i);    
 }
-
 
 
 
