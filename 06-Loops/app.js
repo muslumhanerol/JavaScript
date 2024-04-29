@@ -72,7 +72,7 @@
 
  //farklı bir yol
 
- for (let i = 0; i <= 20; i += 3) {
+ for (let i = 10; i <= 20; i += 3) {
     console.log(i);    
 }
 
