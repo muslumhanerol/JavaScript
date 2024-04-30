@@ -103,6 +103,7 @@
 // console.log(total);
 
 // ---------------------------
+
 //1-20 arası sayıları  tek, çift, tek, çift şeklinde yazdırın.
 
 for(let i = 1; i <= 20; i++){
