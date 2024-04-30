@@ -22,7 +22,21 @@ result= kursAdı.replace("Eğitimi","Kursu"); //değiştirici.Eğitimi kelimesin
 result= kursAdı.trim(); //Baştaki ve sondaki boşlıkları kaldırır.
 result= kursAdı.trimStart(); //Sadece baştaki boşlıkları kaldırır.
 result= kursAdı.trimEnd(); //Sadece sondaki boşlıkları kaldırır.
-
+//------
 result=kursAdı.indexOf("F"); //İndex numarasını verir. Eğer o harf yoksa -1 gösterir.
 result=kursAdı.indexOf("F", 3); //index numarasını 3 ncü indexten sonra baş dedik.
+//------
+result=kursAdı.startsWith("F"); //True ya da False değer döndürür. F harfi ile başlıyor mu diye sorgular true çıktısı alınır.
+result=kursAdı.endsWith("i");
+//------
+
+
+
+
+
+
+
+
+
+
 console.log(result);
