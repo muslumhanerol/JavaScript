@@ -72,10 +72,46 @@
 
  //farklı bir yol
 
- for (let i = 0; i <= 10; i += 2) {
-    console.log(i);    
+//  for (let i = 1; i <= 10; i ++) {
+//     if (i % 2 == 0){
+//         console.log(++i);
+//     }
+// }
+
+// ---------------------------
+
+//CONTINUE= i 2 ye bölündüğünde kalan 0 sa döngüye devam et demek
+// for (let i = 1; i <= 10; i ++) {
+//     if (i % 2 == 0){
+//         continue; //çift sayıysa devam edecek, değilse aşağıya inecek.
+//     }
+//     console.log(++i);
+// }
+
+// ---------------------------
+//Kullanıcıdan istediği kadar sayı girevilecei ve girilen sayıların toplandığı kod.
+
+// let total = 0;
+// let num;
+// for(let i = 0; i==0; ){
+//     num = prompt("Lütfen bir sayı giriniz.");
+//     if(num.toLocaleLowerCase() == "exit") { //döngüden çıkmak için exit yazmalı.
+//         break;
+//     }
+//     total += Number(num);    
+// }
+// console.log(total);
+
+// ---------------------------
+//1-20 arası sayıları  tek, çift, tek, çift şeklinde yazdırın.
+
+for(let i = 1; i <= 20; i++){
+    if(i % 2 == 0){
+        console.log(i + " - Çift Sayı");
+    }else{
+        console.log(i + " - Tek sayı");
+    }    
 }
-
-
+console.log(total);
 
 
