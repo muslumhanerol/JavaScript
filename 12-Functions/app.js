@@ -48,15 +48,47 @@
 //---------------------------------------
 //Kadınlar için emeklilik yaşı 60, erkek 65 tir. Doğum yılı cinsiyeti ve adı verilen bir kişinin emekli olmasına kaç yıl kaldığını gösterir func yaz.
 
-function calculateAge(yearOfBirth) {
-    let today = new Date();
-    let year = today.getFullYear();
-    let result = year - yearOfBirth;
+// function calculateAge(yearOfBirth) {
+//     let today = new Date();
+//     let year = today.getFullYear();
+//     let result = year - yearOfBirth;
+//     return result;
+// }
+
+// function calculatePension(yearOfBirth, gender, fullName) {
+//     let age = calculateAge(yearOfBirth);
+//     let diff = gender == "Kadın" ? 60 - age : 65 - age;
+//     // let result = "Sayın '" + fullName + "' emekli olmanıza " + diff + " yıl kalmıştır."
+//     // let result = 'Sayın "' + fullName + '" emekli olmanıza ' + diff + ' yıl kalmıştır.' //Çift tırnak içinde göstermek istersek.
+//     // let result = 'Sayın \'' + fullName + '\' emekli olmanıza ' + diff + ' yıl kalmıştır.' //Tek tırnak içinde tek tırnak gösterme.
+//     let result = `Sayın ${fullName} emekli olmanıza ${diff} yıl kalmıştır.`; //Template Litarel yazım şekli.
+//     return result;
+// }
+
+// console.log(calculatePension(1993,"Erkek","Müslüm Erol"));
+// console.log(calculatePension(1973,"Kadın","Ayşe Mayşe"));
+
+//---------------------------------------
+//---------------------------------------
+//Kendisine verilen dikdörtgen kenar uzunluklarını alıp ilgili dörtgenin alanını ve çevresni hesaplayıp geri döndüren bir function hazırla.
+
+// function calculate(short,long){
+//     let area = short * long;
+//     let envirament = (short + long)*2;
+//     // let result = [area, envirament];
+//     let result = {area,envirament}; //üsttekinin farklı yazım tekniği.
+//     return result;
+// }
+
+// console.log(calculate(4, 6));
+
+//---------------------------------------
+//---------------------------------------
+//Fonksiyon çalıştığında yazı ya da tura çıkan fonksiyon yaz.
+
+function yaziTuraAt(){
+    let ramdom = Math.random();
+    let result = ramdom >= 0.5 ? "Yazı" : "Tura"
     return result;
 }
-
-
-function calculatePension(yearOfBirth, gender, fullName) {
-
-
-}
+console.log(yaziTuraAt());
