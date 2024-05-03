@@ -86,9 +86,38 @@
 //---------------------------------------
 //Fonksiyon çalıştığında yazı ya da tura çıkan fonksiyon yaz.
 
-function yaziTuraAt(){
-    let ramdom = Math.random();
-    let result = ramdom >= 0.5 ? "Yazı" : "Tura"
-    return result;
+// function yaziTuraAt(){
+//     let ramdom = Math.random();
+//     let result = ramdom >= 0.5 ? "Yazı" : "Tura"
+//     return result;
+// }
+// console.log(yaziTuraAt());
+
+//---------------------------------------
+//---------------------------------------
+//Kendisine gönderilen sayının tam bölenlerini bulup döndüren fonksiyonu yaz.
+
+// function tamBolenler(sayi){
+//     let tamBolenlerDizisi = [];
+//     for(let i = 1; i<=sayi; i++){
+//         if(sayi % i == 0){
+//             tamBolenlerDizisi.push(i);
+//         }
+//     }
+//     return tamBolenlerDizisi;
+// }
+
+// console.log(tamBolenler());
+//---------------------------------------
+//---------------------------------------
+//3-10 arası rastgele sayı üretme.
+
+// let random = Math.floor(Math.random() * 7 + 3);
+// console.log(random);
+
+//farklı yazım tekniği
+
+function ramdomInt (min,max){
+    return Math.floor(Math.random()*(max-min+1)+min);
 }
-console.log(yaziTuraAt());
+console.log(ramdomInt(10,15));
