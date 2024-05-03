@@ -16,8 +16,10 @@
 
 //---------------------------------------
 
-function today (){
-    console.log(new Date());
+function today (){ 
+    let result = new Date(); //2. adım = Bu satırı çalıştırıyor ve result içine bugünün tarihini alıyor.
+    return result; //3.Adım = return ü görünce bugünün tarih bilgisini bunu nereden çağırdıysak oraya gönderiyor. Yani 24. satır today(); da bugünün tarihi yazıyor. Dolayısıyla 24.satırdaki bugun = today old. tarih bilgisi bugun değişkenine aktarılıyor. O bilgi de 25. satırda konsola yazdırıldı.
 }
 
-today();
+let bugun = today(); //1.adım= today fonksiyonu buradan çağrılınca, uygulama 19. satıra gidiyor.
+console.log(bugun);
