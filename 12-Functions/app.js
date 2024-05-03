@@ -48,7 +48,15 @@
 //---------------------------------------
 //Kadınlar için emeklilik yaşı 60, erkek 65 tir. Doğum yılı cinsiyeti ve adı verilen bir kişinin emekli olmasına kaç yıl kaldığını gösterir func yaz.
 
-function emeklilikHesapla(dogumYılı, cinsiyet, adSoyad){
-    
+function calculateAge(yearOfBirth) {
+    let today = new Date();
+    let year = today.getFullYear();
+    let result = year - yearOfBirth;
+    return result;
+}
+
+
+function calculatePension(yearOfBirth, gender, fullName) {
+
 
 }
