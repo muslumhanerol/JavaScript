@@ -43,4 +43,11 @@
     
 //----------------------------------------------------------------------
 //----------------------------------------------------------------------
-//3) Traversing Elements = elementler arası gezme.
+//3) Traversing Elements = elementler arası gezme. bir önceki ya ya sonraski elemente erişmek.
+
+let result;
+let taskList = document.getElementById("task-list");
+
+result = taskList.children;
+
+console.log(result);
