@@ -46,8 +46,31 @@
 //3) Traversing Elements = elementler arası gezme. bir önceki ya ya sonraski elemente erişmek.
 
 let result;
-let taskList = document.getElementById("task-list");
+// let taskList = document.getElementById("task-list");
 
-result = taskList.children;
+// result = taskList.children; //bir element içindeki tüm elementleri seçer. task-list içinde 3 tane li var onlar döndürülür.
+// console.log(taskList);
+
+// let body = document.querySelector("body");
+// console.log(body);
+// result = body.children; //body içinde bulunan tüm elementleri döndürdü.
+// result = body.children[0]; // body nin ilk elemanını getirir.
+// result = body.children[3]; // body nin üçüncü elemanını getirir.
+// result = body.firstElementChild; // body nin ilk elemanını getirir.
+// result = body.lastElementChild; // body nin üçüncü elemanını getirir.
+//----------------------------------------------------------------------
+// result = document.getElementById("title");
+// result = result.parentElement; //bir üst elementi döndürür.title ın bir üst elementi card-header.
+// result = result.parentElement.parentElement; //card-header ın bir üst elementini döndürür yani body.
+// result = result.parentElement.parentElement.parentElement; //body nin bir üst elementine gider yani html.
+//----------------------------------------------------------------------
+
+result = document.getElementById("task-list");
+// result = result.nextElementSibling; //aynı seviyedeki ilk elemanı seç demek. yani task-list2 yi seçer.
+
+result = result.firstElementChild; //task-list içindeki ilk elemente erişir yani 1. li ye.
+result = result.nextElementSibling; //task-list içindeki 2. li yi seçer.
+result = result.nextElementSibling.nextElementSibling; //task-list içindeki 3. li yi seçer.
+
 
 console.log(result);
