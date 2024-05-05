@@ -5,3 +5,33 @@ const txtTextDescription = document.getElementById("txt-task-description"); //g�
 const btnAddTask = document.getElementById("btn-add-task"); //ekle butonunu yakaladık.
 const taskList = document.getElementById("task-list");
 
+let taskListArray = [
+    {id:1, taskDescription:"Netflix izle", status:"completed"},
+    {id:2, taskDescription:"Pilav Unutma", status:"pending"},
+    {id:3, taskDescription:"Ceza öde", status:"pending"},
+    {id:4, taskDescription:"Toplantı planla", status:"completed"},
+    {id:15, taskDescription:"Diyet yap", status:"pending"},
+];
+
+//btn-add-task e basıldığında çalışacak komutumuz olsun. Olay event (tıklama, çift tıklama vs.) eklemek istiyorsak addEventListener kullan.
+//ne yapınca yakalanmasını istiyorsunu ("buraya yazıyoruz",ne yapılsın kısmını virgülden sonra yazıyoruz. Çalışacak kodların fonksiyonu. function(){ alert("görev ekledin.") })
+
+btnAddTask.addEventListener("click",function(event){ //event=click işlendiğinde function a bilgi gönderiyor,o bilgi gerçekleşen event bilgisi.Pek çok olay barındıran bilgi. istediğimiz adı verebiliriz e, asdf vs. biz event dedik anlaşılır olsun diye. Alt satırda o davranışları yoksay dedik. Önceden görev yazma alanını doldurup butona bastığımızda yazma alanının için boşalıyordu artık için dolu kalıyor.
+    event.preventDefault();//ilgili olayın default davranışlarını iptal ediyor.
+
+    let value = txtTextDescription.value.trim(); //Kullanıcı tarafından girilecek değeri al value içine koy.
+    //.trim = kullanıcı başta ve sonra boşluk bırakırsa onları yok sayacak.Kullanıcı boşluk boşluk yapar dönderirse hata verir, trim yazmasaydık boşluk olsa dahi kayıt ederdi.
+    if (value!=""){
+        let ıd = taskListArray.length == 0 ? 1 : taskListArray[taskListArray.length-1].ıd + 1; //taskListArray.length == 0 ? 1 ilk kez görev oluşturuyorsam id si 1 olsun, : taskListArray[taskListArray.length-1] daha çnceden görevler varsa taskListArray in sonuncu elemanının bir eksiğini al. onun ıd değerini oku 1 ekle.
+        taskListArray.push(
+            { 
+                "id" : id, //"id" property -- id=25.satırdaki değişken.
+                "taskDescription" : value,
+                "status" : "pending" //varsayılan olarak pending olsun dedik.
+            }
+       );
+    }else{
+        alert("Lütfen görev açıklamasını boş bırakmayınız.")
+    }
+})
+
