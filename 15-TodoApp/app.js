@@ -22,7 +22,7 @@ btnAddTask.addEventListener("click",function(event){ //event=click işlendiğind
     let value = txtTextDescription.value.trim(); //Kullanıcı tarafından girilecek değeri al value içine koy.
     //.trim = kullanıcı başta ve sonra boşluk bırakırsa onları yok sayacak.Kullanıcı boşluk boşluk yapar dönderirse hata verir, trim yazmasaydık boşluk olsa dahi kayıt ederdi.
     if (value!=""){
-        let ıd = taskListArray.length == 0 ? 1 : taskListArray[taskListArray.length-1].ıd + 1; //taskListArray.length == 0 ? 1 ilk kez görev oluşturuyorsam id si 1 olsun, : taskListArray[taskListArray.length-1] daha çnceden görevler varsa taskListArray in sonuncu elemanının bir eksiğini al. onun ıd değerini oku 1 ekle.
+        let id = taskListArray.length == 0 ? 1 : taskListArray[taskListArray.length-1].id + 1; //taskListArray.length == 0 ? 1 ilk kez görev oluşturuyorsam id si 1 olsun, : taskListArray[taskListArray.length-1] daha çnceden görevler varsa taskListArray in sonuncu elemanının bir eksiğini al. onun ıd değerini oku 1 ekle.
         taskListArray.push(
             { 
                 "id" : id, //"id" property -- id=25.satırdaki değişken.
@@ -33,5 +33,20 @@ btnAddTask.addEventListener("click",function(event){ //event=click işlendiğind
     }else{
         alert("Lütfen görev açıklamasını boş bırakmayınız.")
     }
+    txtTextDescription.value = ""; //bir görev ekledikten sonra sayfa yenilenmeden görev ekleme alanı boş olsun.
+    txtTextDescription.focus(); //görev eklendikten sonra imlec yine görev yazma alanına odaklanacak.
 })
+
+
+function displayTasks(){
+    //Bu fonksiyon her ihtiyaç duyulduğunda tüm görevleri yeniden okuyup göstermek için kullanılacak.
+    taskList.innerHTML=""; //tasklist içindeki tüm html kodlarını boşalt.
+    if(taskListArray.length==0){
+        taskList.innerHTML=`<div class="alert alert-warning mb-0">Tanımlı Görev Bulunmamaktadır.</div>`;
+    }else{
+        
+    }
+}
+
+displayTasks();
 
