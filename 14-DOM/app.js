@@ -71,6 +71,7 @@ result = document.getElementById("task-list");
 result = result.firstElementChild; //task-list içindeki ilk elemente erişir yani 1. li ye.
 result = result.nextElementSibling; //task-list içindeki 2. li yi seçer.
 result = result.nextElementSibling.nextElementSibling; //task-list içindeki 3. li yi seçer.
+result = result.previousElementSibling; //bir öncekini döndürür.
 
 
 console.log(result);
