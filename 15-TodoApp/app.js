@@ -30,6 +30,8 @@ btnAddTask.addEventListener("click",function(event){ //event=click işlendiğind
                 "status" : "pending" //varsayılan olarak pending olsun dedik.
             }
        );
+       displayTasks(); //yeni görev eklendiğinde sadece console den görünüyordu, bunu yazınc artık web syf da görünecek.
+       console.log(taskListArray);
     }else{
         alert("Lütfen görev açıklamasını boş bırakmayınız.")
     }
@@ -38,22 +40,23 @@ btnAddTask.addEventListener("click",function(event){ //event=click işlendiğind
 })
 
 
-function displayTasks(){
-    //Bu fonksiyon her ihtiyaç duyulduğunda tüm görevleri yeniden okuyup göstermek için kullanılacak.
+//Bu fonksiyon her ihtiyaç duyulduğunda tüm görevleri yeniden okuyup göstermek için kullanılacak.
+function displayTasks(){    
     taskList.innerHTML=""; //tasklist içindeki tüm html kodlarını boşalt.
     if(taskListArray.length==0){
         taskList.innerHTML=`<div class="alert alert-warning mb-0">Tanımlı Görev Bulunmamaktadır.</div>`;
     }else{
         for(let task of taskListArray){ //taskListArray bu dizinin içine gider 0 ıncı elemandan başlar en sonuncuya kadar döner. Her döndüğünde sıradaki elemana task der.
+            let completed = task.status == "completed" ? "checked" : ""; //statu completed ise let completed değişkeninin içine checked yaz, değilse boş bırak.
             let taskLi = `
-            <li class="task list-group-item" id="1">
+            <li class="task list-group-item" id="${task.id}">
                 <div class="form-check d-flex justify-content-between align-items-center">
-                    <input type="checkbox" id="1" class="form-check-input">
+                    <input type="checkbox" id="${task.id}" class="form-check-input"${completed}>
                     <div class="input-group">
-                        <input id="1" class="form-control" type="text" value="Netflix aboneliğini iptal et." disabled></input> 
+                        <input id="${task.id}" class="form-control ${completed}" type="text" value="${task.taskDescription}" disabled /> 
                         <!-- disabled= işlem yapılamaz hale getirir(tıklama vs...) -->
-                        <button id="1" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button id="1" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        <button id="${task.id}" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button id="${task.id}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                     </div>
                 </div>                            
             </li>
