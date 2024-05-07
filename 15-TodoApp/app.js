@@ -44,7 +44,10 @@ function displayTasks(){
     if(taskListArray.length==0){
         taskList.innerHTML=`<div class="alert alert-warning mb-0">Tanımlı Görev Bulunmamaktadır.</div>`;
     }else{
-        
+        for(let task of taskListArray){ //taskListArray bu dizinin içine gider 0 ıncı elemandan başlar en sonuncuya kadar döner. Her döndüğünde sıradaki elemana task der.
+            task.
+
+        }
     }
 }
 
