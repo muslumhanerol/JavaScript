@@ -45,7 +45,22 @@ function displayTasks(){
         taskList.innerHTML=`<div class="alert alert-warning mb-0">Tanımlı Görev Bulunmamaktadır.</div>`;
     }else{
         for(let task of taskListArray){ //taskListArray bu dizinin içine gider 0 ıncı elemandan başlar en sonuncuya kadar döner. Her döndüğünde sıradaki elemana task der.
-            task.
+            let taskLi = `
+            <li class="task list-group-item" id="1">
+                <div class="form-check d-flex justify-content-between align-items-center">
+                    <input type="checkbox" id="1" class="form-check-input">
+                    <div class="input-group">
+                        <input id="1" class="form-control" type="text" value="Netflix aboneliğini iptal et." disabled></input> 
+                        <!-- disabled= işlem yapılamaz hale getirir(tıklama vs...) -->
+                        <button id="1" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button id="1" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>                            
+            </li>
+
+            `;
+            taskList.insertAdjacentHTML("beforeend",taskLi); //Seçilen element neresiyse içine ya da dışına başka bir Html kodunu yerleştirir. Biz burda ul nin bitiminin önüne yerleştir dedik.index.html de 33. satır olan.
+            //,taskLi= taskLi içinde yazan html kodlarını taskList isimli elementin bitişinin öncesine yerleştir.
 
         }
     }
