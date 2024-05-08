@@ -16,7 +16,9 @@ let taskListArray = [
 //btn-add-task e basıldığında çalışacak komutumuz olsun. Olay event (tıklama, çift tıklama vs.) eklemek istiyorsak addEventListener kullan.
 //ne yapınca yakalanmasını istiyorsunu ("buraya yazıyoruz",ne yapılsın kısmını virgülden sonra yazıyoruz. Çalışacak kodların fonksiyonu. function(){ alert("görev ekledin.") })
 
-btnAddTask.addEventListener("click",function(event){ //event=click işlendiğinde function a bilgi gönderiyor,o bilgi gerçekleşen event bilgisi.Pek çok olay barındıran bilgi. istediğimiz adı verebiliriz e, asdf vs. biz event dedik anlaşılır olsun diye. Alt satırda o davranışları yoksay dedik. Önceden görev yazma alanını doldurup butona bastığımızda yazma alanının için boşalıyordu artık için dolu kalıyor.
+btnAddTask.addEventListener("click", addTask); //btnAddTask elementine click yapıldığında çılışacak olan fonksiyonun adı addTask dir.
+
+function addTask(event){ //Yeni görev ekleyen fonksiyon.
     event.preventDefault();//ilgili olayın default davranışlarını iptal ediyor.
 
     let value = txtTextDescription.value.trim(); //Kullanıcı tarafından girilecek değeri al value içine koy.
@@ -37,7 +39,10 @@ btnAddTask.addEventListener("click",function(event){ //event=click işlendiğind
     }
     txtTextDescription.value = ""; //bir görev ekledikten sonra sayfa yenilenmeden görev ekleme alanı boş olsun.
     txtTextDescription.focus(); //görev eklendikten sonra imlec yine görev yazma alanına odaklanacak.
-})
+
+
+}
+
 
 
 //Bu fonksiyon her ihtiyaç duyulduğunda tüm görevleri yeniden okuyup göstermek için kullanılacak.
@@ -51,7 +56,7 @@ function displayTasks(){
             let taskLi = `
             <li class="task list-group-item" id="${task.id}">
                 <div class="form-check d-flex justify-content-between align-items-center">
-                    <input type="checkbox" id="${task.id}" class="form-check-input"${completed}>
+                    <input onclick="updateStatus(this);" type="checkbox" id="${task.id}" class="form-check-input"${completed}>
                     <div class="input-group">
                         <input id="${task.id}" class="form-control ${completed}" type="text" value="${task.taskDescription}" disabled /> 
                         <!-- disabled= işlem yapılamaz hale getirir(tıklama vs...) -->
@@ -68,6 +73,12 @@ function displayTasks(){
         }
     }
 }
+
+//Task update  (tamamlandı ya da devam ediyor işlemini yapan fonksiyon)
+function updateStatus(){
+    alert("başarılı");
+}
+
 
 displayTasks();
 
