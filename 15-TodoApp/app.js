@@ -95,9 +95,14 @@ function editTask(clickedButton){ //clickedButton= edit butonu
     editedTask.classList.remove("checked"); //tamamlananlar kırmızı görünüyordu, edit butonuna tıklanınca onlar normal görünüyor.
     clickedButton.classList.remove("btn-warning")// edit butonuna tıklandığında class ı olan btn-warning özelliği yani  sarı renk siliniyor.
     clickedButton.classList.add("btn-info"); // edit butonuna tıklandığında yeni class ekleniyor.
-    clickedButton.firstElementChild.classList.remove("fa-pen-to-square"); //clickedButton içerisindeki ilk element yani icon elementinin classLisrt ine eriştik ve remove yaptık sildik.
-    clickedButton.firstElementChild.classList.add("fa-circle-check");//clickedButton içerisindeki ilk element yani icon elementinin classLisrt ine eriştik ve add dedik yani yeni icon clası ekledik.
-    editedTask.focus(); //görevlerden birinin edit butonuna tıklandığında imleç oraya komunlanacak.
+    
+    // clickedButton.firstElementChild.classList.remove("fa-pen-to-square"); //clickedButton içerisindeki ilk element yani icon elementinin classLisrt ine eriştik ve remove yaptık sildik.
+    // clickedButton.firstElementChild.classList.remove("fa-solid");
+    // clickedButton.firstElementChild.classList.add("fa-circle-check");//clickedButton içerisindeki ilk element yani icon elementinin classLisrt ine eriştik ve add dedik yani yeni icon clası ekledik.
+    // clickedButton.firstElementChild.classList.add("fa-regular");
+    // editedTask.focus(); //görevlerden birinin edit butonuna tıklandığında imleç oraya komunlanacak.
+    
+    clickedButton.innerHTML='<i class="fa-solid fa-circle-check"></i>'; //edit butonuna tıkladığımızda rengi ve iconu değişiyor. /99 103 kodları ve arası tek satır yazımı.
 }
 
 
