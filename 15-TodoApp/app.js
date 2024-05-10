@@ -60,8 +60,8 @@ function displayTasks(){
                     <div class="input-group">
                         <input id="${task.id}" class="form-control ${completed}" type="text" value="${task.taskDescription}" disabled /> 
                         <!-- disabled= işlem yapılamaz hale getirir(tıklama vs...) -->
-                        <button id="${task.id}" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button id="${task.id}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        <button onclick="editTask(this);" id="${task.id}" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button onclick="deleteTask(this);" id="${task.id}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                     </div>
                 </div>                            
             </li>
@@ -69,7 +69,6 @@ function displayTasks(){
             `;
             taskList.insertAdjacentHTML("beforeend",taskLi); //Seçilen element neresiyse içine ya da dışına başka bir Html kodunu yerleştirir. Biz burda ul nin bitiminin önüne yerleştir dedik.index.html de 33. satır olan.
             //,taskLi= taskLi içinde yazan html kodlarını taskList isimli elementin bitişinin öncesine yerleştir.
-
         }
     }
 }
@@ -88,6 +87,17 @@ function updateStatus(activeTask){
         }
     }
     displayTasks(); //ekranı güncelle.
+}
+
+function editTask(clickedButton){ //clickedButton= edit butonu
+    let editedTask = clickedButton.previousElementSibling; //clickedButton un yani edit butonunun bir üst elenetine eriştik, yani input.
+    editedTask.removeAttribute("disabled"); //istenilen etribütün özelliğini kaldırır. Burada disabled özelliğini kaldırınca edit görev metinlerine imleç işlevsel hale geldi.
+    editedTask.classList.remove("checked"); //tamamlananlar kırmızı görünüyordu, edit butonuna tıklanınca onlar normal görünüyor.
+    clickedButton.classList.remove("btn-warning")// edit butonuna tıklandığında class ı olan btn-warning özelliği yani  sarı renk siliniyor.
+    clickedButton.classList.add("btn-info"); // edit butonuna tıklandığında yeni class ekleniyor.
+    clickedButton.firstElementChild.classList.remove("fa-pen-to-square"); //clickedButton içerisindeki ilk element yani icon elementinin classLisrt ine eriştik ve remove yaptık sildik.
+    clickedButton.firstElementChild.classList.add("fa-circle-check");//clickedButton içerisindeki ilk element yani icon elementinin classLisrt ine eriştik ve add dedik yani yeni icon clası ekledik.
+    editedTask.focus(); //görevlerden birinin edit butonuna tıklandığında imleç oraya komunlanacak.
 }
 
 
