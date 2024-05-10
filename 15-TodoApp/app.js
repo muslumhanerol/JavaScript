@@ -51,7 +51,7 @@ function displayTasks(){
     if(taskListArray.length==0){
         taskList.innerHTML=`<div class="alert alert-warning mb-0">Tanımlı Görev Bulunmamaktadır.</div>`;
     }else{
-        for(let task of taskListArray){ //taskListArray bu dizinin içine gider 0 ıncı elemandan başlar en sonuncuya kadar döner. Her döndüğünde sıradaki elemana task der.
+        for(const task of taskListArray){ //taskListArray bu dizinin içine gider 0 ıncı elemandan başlar en sonuncuya kadar döner. Her döndüğünde sıradaki elemana task der.
             let completed = task.status == "completed" ? "checked" : ""; //statu completed ise let completed değişkeninin içine checked yaz, değilse boş bırak.
             let taskLi = `
             <li class="task list-group-item" id="${task.id}">
@@ -75,8 +75,19 @@ function displayTasks(){
 }
 
 //Task update  (tamamlandı ya da devam ediyor işlemini yapan fonksiyon)
-function updateStatus(){
-    alert("başarılı");
+function updateStatus(activeTask){
+    let newsStatus = activeTask.checked ? "completed" : "pending"; //activeTask checked sa completed yap değilse pending yap.
+    // let newsStatus = activeTask.checked == true ? "completed" : "pending"; farklı bir yazım tekniği.
+    // let newsStatus = !activeTask.checked ? "completed" : "pending"; tam tersi yapmaz isteseydik.
+    // let newsStatus = activeTask.checked == false ? "completed" : "pending"; //tam tersi için farklı bir yazım tekniği.
+    for (const task of taskListArray){
+        if (activeTask.id == task.id) {
+            task.status = newsStatus;
+            break;
+            
+        }
+    }
+    displayTasks(); //ekranı güncelle.
 }
 
 
