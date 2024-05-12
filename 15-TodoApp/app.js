@@ -96,6 +96,8 @@ function updateStatus(activeTask){
 function editTask(clickedButton){ //clickedButton= edit butonu
     
     let editedTask = clickedButton.previousElementSibling; //clickedButton un yani edit butonunun bir üst elenetine eriştik, yani input.
+    let isChecked = editedTask.classList.include("checked"); //include=içinde varmı diye arar.
+
 
     if(!isEditMode){
         editedTask.removeAttribute("disabled"); //istenilen etribütün özelliğini kaldırır. Burada disabled özelliğini kaldırınca edit görev metinlerine imleç işlevsel hale geldi.
@@ -113,19 +115,14 @@ function editTask(clickedButton){ //clickedButton= edit butonu
     editedTask.focus();
     isEditMode=true;
         
-    }else{
+    }else{ //düzenle butonuna tıklayınca icon mavi olacak ve işimiz bitince, mavi olana tıklayınca sarı olacak. 
         editedTask.setAttribute("disabled","disabled"); //ilk olan "disabled" = attribute adı, ikincisi=değeri.
         clickedButton.classList.remove("btn-info"); //btn-infoyu sil
         clickedButton.classList.add("btn-warning"); //btn-warning ekle
         clickedButton.innerHTML='<i class="fa-solid fa-pen-to-square"></i>';
         isEditMode = false;
-
-    }
-
-
-    
+    }    
 }
-
 
 displayTasks();
 
