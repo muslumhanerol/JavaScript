@@ -5,6 +5,10 @@ const txtTextDescription = document.getElementById("txt-task-description"); //g�
 const btnAddTask = document.getElementById("btn-add-task"); //ekle butonunu yakaladık.
 const taskList = document.getElementById("task-list");
 
+let isEditMode = false; //Eğer bu değişken false ise yeni kayıt modundayız, true ise düzenleme modundayız.
+let editedArray; //Hangi görevi düzenleniyorsa onun id sini tutmaya yarar.
+
+
 let taskListArray = [
     {id:1, taskDescription:"Netflix izle", status:"completed"},
     {id:2, taskDescription:"Pilav Unutma", status:"pending"},
@@ -90,8 +94,11 @@ function updateStatus(activeTask){
 }
 
 function editTask(clickedButton){ //clickedButton= edit butonu
+    
     let editedTask = clickedButton.previousElementSibling; //clickedButton un yani edit butonunun bir üst elenetine eriştik, yani input.
-    editedTask.removeAttribute("disabled"); //istenilen etribütün özelliğini kaldırır. Burada disabled özelliğini kaldırınca edit görev metinlerine imleç işlevsel hale geldi.
+
+    if(!isEditMode){
+        editedTask.removeAttribute("disabled"); //istenilen etribütün özelliğini kaldırır. Burada disabled özelliğini kaldırınca edit görev metinlerine imleç işlevsel hale geldi.
     editedTask.classList.remove("checked"); //tamamlananlar kırmızı görünüyordu, edit butonuna tıklanınca onlar normal görünüyor.
     clickedButton.classList.remove("btn-warning")// edit butonuna tıklandığında class ı olan btn-warning özelliği yani  sarı renk siliniyor.
     clickedButton.classList.add("btn-info"); // edit butonuna tıklandığında yeni class ekleniyor.
@@ -103,6 +110,16 @@ function editTask(clickedButton){ //clickedButton= edit butonu
     // editedTask.focus(); //görevlerden birinin edit butonuna tıklandığında imleç oraya komunlanacak.
     
     clickedButton.innerHTML='<i class="fa-solid fa-circle-check"></i>'; //edit butonuna tıkladığımızda rengi ve iconu değişiyor. /99 103 kodları ve arası tek satır yazımı.
+    editedTask.focus();
+    isEditMode=true;
+        
+    }else{
+        editTask.setAttribute("disabled","disabled"); //ilk olan "disabled" = attribute adı, ikincisi=değeri.
+
+    }
+
+
+    
 }
 
 
