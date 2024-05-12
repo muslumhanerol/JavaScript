@@ -114,7 +114,11 @@ function editTask(clickedButton){ //clickedButton= edit butonu
     isEditMode=true;
         
     }else{
-        editTask.setAttribute("disabled","disabled"); //ilk olan "disabled" = attribute adı, ikincisi=değeri.
+        editedTask.setAttribute("disabled","disabled"); //ilk olan "disabled" = attribute adı, ikincisi=değeri.
+        clickedButton.classList.remove("btn-info"); //btn-infoyu sil
+        clickedButton.classList.add("btn-warning"); //btn-warning ekle
+        clickedButton.innerHTML='<i class="fa-solid fa-pen-to-square"></i>';
+        isEditMode = false;
 
     }
 
