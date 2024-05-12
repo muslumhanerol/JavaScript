@@ -125,9 +125,17 @@ function editTask(clickedButton){ //clickedButton= edit butonu
         clickedButton.classList.remove("btn-info"); //btn-infoyu sil
         clickedButton.classList.add("btn-warning"); //btn-warning ekle
         clickedButton.innerHTML='<i class="fa-solid fa-pen-to-square"></i>';
+
+        for (const task of taskListArray){ //Kayıt işlemi için yazıyoruz.
+            if(editedTaskId==task.id){//güncelleme yaptığımız gçrevin id si o sırada kontrol edilen gçrevin id sine
+                task.taskDescription=editedTask.value; //ilğili taskin description ında, kullanıcının giriş yaptığı editedTask in değerini taskDescription a ata.
+                break;
+            }
+        }
         isEditMode = false;
+        displayTasks();
     }    
 }
-
 displayTasks();
 
+//007--19-11-2023 3. videoda kaldık.
