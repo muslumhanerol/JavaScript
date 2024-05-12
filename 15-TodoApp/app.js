@@ -94,14 +94,18 @@ function updateStatus(activeTask){
 }
 
 function editTask(clickedButton){ //clickedButton= edit butonu
-    
+    editedTaskId = clickedButton.id;
     let editedTask = clickedButton.previousElementSibling; //clickedButton un yani edit butonunun bir üst elenetine eriştik, yani input.
-    let isChecked = editedTask.classList.include("checked"); //include=içinde varmı diye arar.
-
+    let checked;
+    for (const task of taskListArray){ 
+        if(task.id==editedTaskId){ //sıradaki task in id si editedTaskId ye eşitse
+            checked = task.status; //sıradaki taskin statusünü ver.
+        };
+    }
 
     if(!isEditMode){
         editedTask.removeAttribute("disabled"); //istenilen etribütün özelliğini kaldırır. Burada disabled özelliğini kaldırınca edit görev metinlerine imleç işlevsel hale geldi.
-    editedTask.classList.remove("checked"); //tamamlananlar kırmızı görünüyordu, edit butonuna tıklanınca onlar normal görünüyor.
+    if (checked == "completed") editedTask.classList.remove("checked"); //checked completed ise class ı sil, kırmızı şetir ve saru buton gidiyor. beyaz şetir ve mavi buton geliyor.
     clickedButton.classList.remove("btn-warning")// edit butonuna tıklandığında class ı olan btn-warning özelliği yani  sarı renk siliniyor.
     clickedButton.classList.add("btn-info"); // edit butonuna tıklandığında yeni class ekleniyor.
     
@@ -117,6 +121,7 @@ function editTask(clickedButton){ //clickedButton= edit butonu
         
     }else{ //düzenle butonuna tıklayınca icon mavi olacak ve işimiz bitince, mavi olana tıklayınca sarı olacak. 
         editedTask.setAttribute("disabled","disabled"); //ilk olan "disabled" = attribute adı, ikincisi=değeri.
+        if(checked == "completed") editedTask.classList.add("checked"); //108. satır tersi.
         clickedButton.classList.remove("btn-info"); //btn-infoyu sil
         clickedButton.classList.add("btn-warning"); //btn-warning ekle
         clickedButton.innerHTML='<i class="fa-solid fa-pen-to-square"></i>';
