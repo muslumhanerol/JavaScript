@@ -132,7 +132,7 @@ function editTask(clickedButton){ //clickedButton= edit butonu
                 break;
             }
         }
-        isEditMode = false;
+        isEditMode = true;
         displayTasks();
     }    
 }
