@@ -291,3 +291,8 @@ header .search button{
     object-fit: cover;
     border-radius: 50%;
 }
+
+.content .comments .right .item p{
+    font-size: 14px;
+    
+}
