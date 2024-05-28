@@ -161,7 +161,8 @@ header .search button{
     font-size: 18px;
 }
 
-.content .courses{
+.content .courses,
+.content .podcasts{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -169,12 +170,15 @@ header .search button{
     margin-bottom: 100px;
 }
 
-.content .courses .item{
+.content .courses .item,
+.content .podcasts .item{
     width: 30%;
 }
 
 .content .courses .item .top,
-.content .courses .item .bottom{
+.content .courses .item .bottom,
+.content .podcasts .item .top,
+.content .podcasts .item .bottom{
     display: flex;
     gap: 10px;
     background-color: #fff;
@@ -191,20 +195,23 @@ header .search button{
     border-radius: 8px;
 }
 
-.content .courses .item .top .info a{
+.content .courses .item .top .info a,
+.content .podcasts .item .top .info a{
     display: block;
     font-size: 15px;
     font-weight: 900;
     margin-bottom: 8px;
     line-height: 1.4rem;
 }
-.content .courses .item .top .info p{
+.content .courses .item .top .info p,
+.content .podcasts .item .top .info p{
     color: #888;
     font-size: 13px;
     margin-bottom: 2px;
 }
 
-.content .courses .item .bottom{
+.content .courses .item .bottom,
+.content .podcasts .item .bottom{
     border-bottom: none;
     justify-content: space-between;
     border-top: 1px dashed #888;
@@ -217,7 +224,8 @@ header .search button{
 }
 
 .content .courses .item .bottom h5.tag,
-.content .courses .item .bottom .discount > h5{
+.content .courses .item .bottom .discount > h5,
+.content .podcasts .item .bottom h5{
     font-weight: 500;
     background-color: #fff2b2;
     color: #db7c26;
@@ -227,7 +235,8 @@ header .search button{
 }
 
 .content .courses .item .bottom h5.tag span,
-.content .courses .item .bottom .discount > h5 span{
+.content .courses .item .bottom .discount > h5 span,
+.content .podcasts .item .bottom h5 span{
     font-weight: bold;
 }
 
@@ -293,6 +302,36 @@ header .search button{
 }
 
 .content .comments .right .item p{
-    font-size: 14px;
-    
+    font-size: 14px;    
 }
+
+.content .podcasts .item .top i{
+    font-size: 40px;
+    background-color: #4361ee;
+    padding: 12px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.content .podcasts .item:nth-child(2) .top i{
+    background-color: #f72585;
+}
+.content .podcasts .item:nth-child(3) .top i{
+    background-color: #fb8500;
+}
+
+.content .podcasts .item .bottom .duration{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.content .podcasts .item .bottom .duration i{
+    font-size: 26px;
+    color: #2d6a4f;
+}
+
+.content .podcasts .item .bottom .duration p{
+    color: #2d6a4f;
+    font-size: 13px;
+}
+
