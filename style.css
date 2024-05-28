@@ -110,7 +110,32 @@ header .buttons button{
 
 header .buttons button.see-all{
     background-color: #2d6a4f;
-
 }
+
+header .search{
+    position: relative;
+    width: 30%;
+    margin-top: 10px;
+}
+
+header .search input{
+    width: 100%;
+    padding: 18px 20px;
+    border: none;
+    border-radius: 18px;
+    box-shadow:  0px 4px 70px -10px rgba(0, 0, 0, 0.6);
+    outline: none;    
+}
+
+header .search button{
+    position: absolute;
+    right: 0;
+    padding: 12px;
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+}
+
+
 
 
