@@ -252,3 +252,42 @@ header .search button{
 .content .courses .item .bottom .discount .time h5{
     font-size: 13px;
 }
+
+.content .comments{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 0 100px;
+}
+
+.content .comments > p{
+    width: 65%;
+    color: #2d6a4f;
+    font-size: 20px;
+}
+
+.content .comments .right{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 14px;
+}
+
+.content .comments .right .item{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff;
+    padding: 8px;
+    width: 32%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.content .comments .right .item img{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
