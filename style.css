@@ -205,9 +205,26 @@ header .search button{
 }
 
 .content .courses .item .bottom{
-    
+    border-bottom: none;
+    justify-content: space-between;
+    border-top: 1px dashed #888;
 }
 
+.content .courses .item .bottom .price p{
+    color: #888;
+    font-size: 13px;
+    text-decoration: line-through;
+}
 
+.content .courses .item .bottom h5.tag{
+    font-weight: 500;
+    background-color: #fff2b2;
+    color: #db7c26;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 13px;
+}
 
-
+.content .courses .item .bottom h5.tag span{
+    font-weight: bold;
+}
