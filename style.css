@@ -50,3 +50,16 @@ nav .left .links{
     font-weight: bold;    
 }
 
+nav .buttons{
+    display: flex;
+    gap: 14px;
+}
+
+nav .buttons a{
+    background-color: #eaf4f4;
+    padding: 10px;
+    color: #2d6a4f;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
