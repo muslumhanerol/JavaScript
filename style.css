@@ -373,6 +373,111 @@ header .search button{
 }
 
 
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 100px 30px;
+    background-color: #2d6a4f;
+    color: #fff;
+    border-radius: 40px 40px 0px 0px;
+}
+
+footer .columns{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .columns .col{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+footer .columns .col.last{
+    flex: 3;
+}
+
+footer .columns .col h5{
+    margin-bottom: 14px;
+    font-size: 16px;
+}
+
+footer .columns .col a{
+    margin-bottom: 4px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+footer .columns .col a:hover{
+    color: #fff;
+}
+
+footer .columns .col.last p{
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+footer .columns .col.last .social-links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .columns .col.last .social-links i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer .copyright{
+    margin-top: 50px;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1200px) {
+    nav{
+        padding: 0 60px;
+    }
+
+    header .search{
+        width: 50%;
+    }
+
+    .content{
+        padding: 100px 60px 0;
+    }
+
+    .content .courses .item .top,
+    .content .courses .item .bottom,
+    .content .articles .item .bottom{
+        flex-direction: column;
+    }
+
+    .content .courses .item .top img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .content .courses .item .bottom .price{
+        text-align: center;
+    }
+
+    .content .courses .item .bottom .discount{
+        justify-content: space-between;
+    }
+
+    .content .courses .item .bottom h5.tag{
+        text-align: center;
+    }
+
+    .content .courses .item .bottom .discount > h5{
+        width: 70%;
+        text-align: center;
+    }
+
+
+    
+}
 
 
 
