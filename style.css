@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'roboto' sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 a{
@@ -28,7 +28,7 @@ nav{
     padding: 0 80px;
     height: 80px;
     background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px ;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 nav .left{
@@ -47,7 +47,7 @@ nav .left .links{
     display: flex;
     gap: 20px;
     font-size: 15px;
-    font-weight: bold;    
+    font-weight: bold;
 }
 
 nav .buttons{
@@ -65,7 +65,7 @@ nav .buttons a{
 
 header{
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     padding: 100px 0;
     justify-content: center;
@@ -73,10 +73,9 @@ header{
     gap: 26px;
     background-color: #fff;
     opacity: 0.8;
-
-    /* background-image: radial-gradient(#2d6a4f 0.75px, transparent 0.75px), radial-gradient(#2d6a4f 0.75, #ffffff 0.75px);
+    background-image:  radial-gradient(#2d6a4f 0.75px, transparent 0.75px), radial-gradient(#2d6a4f 0.75px, #ffffff 0.75px);
     background-size: 30px 30px;
-    background-position: 0 0,15px 15px; */
+    background-position: 0 0,15px 15px;
 }
 
 header .info h1{
@@ -123,8 +122,8 @@ header .search input{
     padding: 18px 20px;
     border: none;
     border-radius: 18px;
-    box-shadow:  0px 4px 70px -10px rgba(0, 0, 0, 0.6);
-    outline: none;    
+    box-shadow: 0px 4px 70px -10px rgba(0, 0, 0, 0.6);
+    outline: none;
 }
 
 header .search button{
@@ -145,8 +144,8 @@ header .search button{
 .content .separator{
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    margin-bottom: 30px;    
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .content .separator a,
@@ -187,7 +186,7 @@ header .search button{
     gap: 10px;
     background-color: #fff;
     padding: 14px;
-    box-sizing: 0 10px 30px rgba(0, 0, 0, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 18px;
     border-bottom: 1px dashed #888;
 }
@@ -207,6 +206,7 @@ header .search button{
     margin-bottom: 8px;
     line-height: 1.4rem;
 }
+
 .content .courses .item .top .info p,
 .content .podcasts .item .top .info p{
     color: #888;
@@ -218,7 +218,7 @@ header .search button{
 .content .podcasts .item .bottom,
 .content .articles .item .bottom{
     border-bottom: none;
-    justify-content: space-between;
+    justify-content: space-between;    
     border-top: 1px dashed #888;
 }
 
@@ -251,9 +251,10 @@ header .search button{
     display: flex;
     gap: 10px;
 }
+
 .content .courses .item .bottom .discount > h5{
     background-color: #b7e4c7;
-    color: #b7e4c7;
+    color: #2d6a4f;
 }
 
 .content .courses .item .bottom .discount .time{
@@ -309,7 +310,7 @@ header .search button{
 }
 
 .content .comments .right .item p{
-    font-size: 14px;    
+    font-size: 14px;
 }
 
 .content .podcasts .item .top i{
@@ -323,6 +324,7 @@ header .search button{
 .content .podcasts .item:nth-child(2) .top i{
     background-color: #f72585;
 }
+
 .content .podcasts .item:nth-child(3) .top i{
     background-color: #fb8500;
 }
@@ -332,6 +334,7 @@ header .search button{
     align-items: center;
     gap: 6px;
 }
+
 .content .podcasts .item .bottom .duration i{
     font-size: 26px;
     color: #2d6a4f;
@@ -342,7 +345,7 @@ header .search button{
     font-size: 13px;
 }
 
-.content .podcasts .item .bottom .duration h5{
+.content .podcasts .item .bottom h5{
     background-color: #ede0d4;
     color: #9c6644;
 }
@@ -353,7 +356,7 @@ header .search button{
     margin-bottom: 80px;
     flex-wrap: wrap;
     row-gap: 20px;
-}   
+}
 
 .content .articles .item{
     width: 23%;
@@ -361,7 +364,6 @@ header .search button{
 
 .content .articles .item .top{
     flex-direction: column;
-
 }
 
 .content .articles .item .top img{
@@ -372,7 +374,6 @@ header .search button{
     margin-bottom: 8px;
 }
 
-
 footer{
     display: flex;
     flex-direction: column;
@@ -380,7 +381,7 @@ footer{
     padding: 60px 100px 30px;
     background-color: #2d6a4f;
     color: #fff;
-    border-radius: 40px 40px 0px 0px;
+    border-radius: 40px 40px 0 0;
 }
 
 footer .columns{
@@ -435,6 +436,7 @@ footer .copyright{
 }
 
 @media screen and (max-width:1200px) {
+    
     nav{
         padding: 0 60px;
     }
@@ -454,8 +456,8 @@ footer .copyright{
     }
 
     .content .courses .item .top img{
-        width: 100px;
-        height: 100px;
+        width: 100%;
+        height: 180px;
     }
 
     .content .courses .item .bottom .price{
@@ -475,8 +477,152 @@ footer .copyright{
         text-align: center;
     }
 
+    .content .comments{
+        flex-direction: column;
+    }
 
+    .content .comments > p{
+        width: 100%;
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 940px) {
     
+    nav .left .logo{
+        display: none;
+    }
+
+    .content .courses .item,
+    .content .articles .item{
+        width: 45%;
+    }
+
+    .content .courses .item .bottom .discount > h5{
+        width: 80%;
+    }
+
+    .content .comments .right .item{
+        width: 48%;
+    }
+
+    .content .podcasts .item .top,
+    .content .podcasts .item .bottom{
+        flex-direction: column;
+    }
+
+    .content .podcasts .item .top i{
+        text-align: center;
+        padding: 18px;
+    }
+
+    .content .podcasts .item .bottom{
+        text-align: center;
+    }
+
+    .content .articles .item .top img{
+        height: 220px;
+    }
+
+    footer{
+        padding: 60px 70px 30px;
+    }
+
+    footer .columns{
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    footer .columns .col,
+    footer .columns .col.last{
+        width: 45%;
+        flex: none;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    
+    nav{
+        padding: 0 30px;
+    }
+
+    nav .left .links{
+        font-size: 13px;
+        gap: 14px;
+    }
+
+    nav .buttons a:first-child{
+        display: none;
+    }
+
+    header .info h1{
+        font-size: 26px;
+    }
+
+    header .info p{
+        font-size: 16px;
+    }
+
+    header .search{
+        width: 70%;
+    }
+
+    .content{
+        padding: 100px 30px 0;
+    }
+
+    .content .courses .item .top{
+        height: 324px;
+    }
+
+    .content .courses .item .bottom .discount .time{
+        display: none;
+    }
+
+    .content .courses .item .bottom .discount > h5{
+        width: 100%;
+    }
+
+    .content .articles .item .top img{
+        height: 160px;
+    }
+
+    footer{
+        padding: 60px 50px 30px;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    
+    nav .left .links a:nth-child(5),
+    nav .left .links a:nth-child(6){
+        display: none;
+    }
+
+    .content .courses .item .top .info a,
+    .content .podcasts .item .top .info a{
+        font-size: 14px;
+    }
+
+    .content .comments .right .item p{
+        font-size: 13px;
+    }
+
+    .content .podcasts .item .top .info p{
+        font-size: 11px;
+    }
+
+    .content .podcasts .item .bottom .duration i{
+        font-size: 20px;
+    }
+
+    footer{
+        padding: 60px 30px 30px;
+    }
+
 }
 
 
