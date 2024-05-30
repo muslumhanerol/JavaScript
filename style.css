@@ -198,6 +198,12 @@ header .search button{
     border-radius: 8px;
 }
 
+.content .courses .item .top i{
+    font-size: 120px;
+    color: #f72585;   
+}
+
+
 .content .courses .item .top .info a,
 .content .podcasts .item .top .info a{
     display: block;
