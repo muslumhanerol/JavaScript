@@ -252,6 +252,14 @@ header .search button{
     border-radius: 12px;
     font-size: 13px;
 }
+.content .educations .item .top{
+    justify-content: center;
+    align-items: center;
+}
+.content .educations .item .top h5{
+  font-size: 22px;
+  color: rebeccapurple;
+}
 
 .content .courses .item .bottom h5.tag span,
 .content .courses .item .bottom .discount > h5 span,
@@ -410,15 +418,9 @@ header .search button{
     flex-direction: column;
 }
 
-.content .educations .item .top img{
-    width: 540px;
-    height: 280px;
-    border-radius: 10px;
-    margin-bottom: 8px;
-}
 
-
-.content .articles{
+.content .articles,
+.content .educations{
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
@@ -426,20 +428,24 @@ header .search button{
     row-gap: 20px;
 }
 
-.content .articles .item{
-    width: 23%;
+.content .articles .item,
+.content .educations .item{
+    width: 33%;
 }
 
-.content .articles .item .top{
+.content .articles .item .top,
+.content .educations .item .top{
     flex-direction: column;
 }
 
-.content .articles .item .top img{
+.content .articles .item .top img,
+.content .educations .item .top img{
     width: 100%;
     height: 180px;
     border-radius: 10px;
     margin-bottom: 8px;
 }
+
 
 footer{
     display: flex;
