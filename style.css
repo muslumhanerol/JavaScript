@@ -148,7 +148,8 @@ header .search button{
 }
 
 .content .separator a,
-.content .articles .item .bottom a{
+.content .articles .item .bottom a,
+.content .educations .item .bottom a{
     display: flex;
     align-items: center;
     gap: 2px;
@@ -157,7 +158,8 @@ header .search button{
 }
 
 .content .separator a i,
-.content .articles .item .bottom a i{
+.content .articles .item .bottom a i,
+.content .educations .item .bottom a i{
     font-size: 18px;
 }
 
@@ -180,7 +182,9 @@ header .search button{
 .content .podcasts .item .top,
 .content .podcasts .item .bottom,
 .content .articles .item .top,
-.content .articles .item .bottom{
+.content .articles .item .bottom,
+.content .educations .item .top,
+.content .educations .item .bottom{
     display: flex;
     gap: 10px;
     background-color: #fff;
@@ -223,7 +227,8 @@ header .search button{
 
 .content .courses .item .bottom,
 .content .podcasts .item .bottom,
-.content .articles .item .bottom{
+.content .articles .item .bottom,
+.content .educations .item .bottom{
     border-bottom: none;
     justify-content: space-between;    
     border-top: 1px dashed #888;
@@ -238,7 +243,8 @@ header .search button{
 .content .courses .item .bottom h5.tag,
 .content .courses .item .bottom .discount > h5,
 .content .podcasts .item .bottom h5,
-.content .articles .item .bottom h5{
+.content .articles .item .bottom h5,
+.content .educations .item .bottom h5{
     font-weight: 500;
     background-color: #fff2b2;
     color: #db7c26;
@@ -250,7 +256,8 @@ header .search button{
 .content .courses .item .bottom h5.tag span,
 .content .courses .item .bottom .discount > h5 span,
 .content .podcasts .item .bottom h5 span,
-.content .articles .item .bottom h5 span{
+.content .articles .item .bottom h5 span,
+.content .educations .item .bottom h5 span{
     font-weight: bold;
 }
 
@@ -384,6 +391,30 @@ header .search button{
 }
 .content .refere .item .top img:hover{
     filter: grayscale(0%);
+}
+
+
+.content .educations{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.content .educations .item{
+    width: 33%;
+}
+
+.content .educations .item .top{
+    flex-direction: column;
+}
+
+.content .educations .item .top img{
+    width: 540px;
+    height: 280px;
+    border-radius: 10px;
+    margin-bottom: 8px;
 }
 
 
