@@ -203,7 +203,7 @@ header .search button{
 
 .content .courses .item .top i{
     font-size: 120px;
-    color: #f72585;   
+    color: #f72585;
 }
 
 
@@ -230,7 +230,7 @@ header .search button{
 .content .articles .item .bottom,
 .content .educations .item .bottom{
     border-bottom: none;
-    justify-content: space-between;    
+    justify-content: space-between;
     border-top: 1px dashed #888;
 }
 
@@ -509,7 +509,7 @@ footer .copyright{
 }
 
 @media screen and (max-width:1200px) {
-    
+
     nav{
         padding: 0 60px;
     }
@@ -562,7 +562,7 @@ footer .copyright{
 }
 
 @media screen and (max-width: 940px) {
-    
+
     nav .left .logo{
         display: none;
     }
@@ -616,7 +616,7 @@ footer .copyright{
 }
 
 @media screen and (max-width:768px) {
-    
+
     nav{
         padding: 0 30px;
     }
@@ -669,7 +669,7 @@ footer .copyright{
 }
 
 @media screen and (max-width:576px) {
-    
+
     nav .left .links a:nth-child(5),
     nav .left .links a:nth-child(6){
         display: none;
@@ -696,6 +696,13 @@ footer .copyright{
         padding: 60px 30px 30px;
     }
 
+}
+
+/* ---------------------------------------- */
+
+.contentContact .title h4{
+    margin-top: 50px;
+    font-family: "roboto";
 }
 
 
